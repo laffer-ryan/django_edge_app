@@ -6,9 +6,9 @@ from decouple import Config, RepositoryEnv
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR_ENV = BASE_DIR / '.env'
 REPO_DIR = BASE_DIR.parent
-REPO_DIR_ENV = BASE_DIR / '.env'
-REPO_DIR_ENV_WEB = BASE_DIR / '.env.web'
-
+REPO_DIR_ENV = REPO_DIR / '.env'
+REPO_DIR_ENV_WEB = REPO_DIR / '.env.web'
+# print(BASE_DIR, REPO_DIR_ENV, REPO_DIR_ENV_WEB)
 @lru_cache
 def get_config():
     if BASE_DIR_ENV.exists():
@@ -20,5 +20,5 @@ def get_config():
     from decouple import config
     return config
 
-config = get_config()
+config = get_config() 
 

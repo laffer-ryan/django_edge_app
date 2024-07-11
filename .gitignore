@@ -130,6 +130,8 @@ ENV/
 env.bak/
 venv.bak/
 .env.web
+.env.web_copy_not_used
+.env.db
 
 # Spyder project settings
 .spyderproject
